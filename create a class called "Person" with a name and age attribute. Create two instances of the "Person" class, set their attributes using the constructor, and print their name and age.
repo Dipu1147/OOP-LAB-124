@@ -1,0 +1,38 @@
+//create a class called "Person" with a name and age attribute. Create two instances of the "Person" class, set their attributes using the constructor, and print their name and age.
+class Person {
+    private final String name;
+    private int age;
+
+    // Constructor
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Getter methods
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Create two instances of the Person class
+        Person person1 = new Person("Dipu", 21);
+        Person person2 = new Person("Pranta", 21);
+
+        // Print information about the first person
+        System.out.println("First person:");
+        System.out.println("Name: " + person1.getName());
+        System.out.println("Age: " + person1.getAge());
+
+        // Print information about the second person
+        System.out.println("\nSecond person:");
+        System.out.println("Name: " + person2.getName());
+        System.out.println("Age: " + person2.getAge());
+    }
+}
