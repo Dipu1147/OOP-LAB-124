@@ -1,0 +1,16 @@
+//area of circle
+package lab.practice;
+
+import java.util.Scanner;
+
+public class LabPracticereTask1 {
+     public static void main(String[] args) {
+    double r;
+    double pi=3.1416;
+    System.out.println("Enter a radius");
+    Scanner ref= new Scanner(System.in);
+    r=ref.nextDouble();
+    System.out.println(r*pi*pi);
+     }
+   
+}
