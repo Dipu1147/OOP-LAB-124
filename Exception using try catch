@@ -1,0 +1,24 @@
+public class ExceptionExample {
+
+    // Method that throws an exception
+    public static void throwException() {
+        // Creating a RuntimeException (ArithmeticException in this case)
+        throw new ArithmeticException("This is a custom exception message.");
+    }
+
+    public static void main(String[] args) {
+        try {
+            // Calling the method that throws an exception
+            throwException();
+        } catch (ArithmeticException e) {
+            // Catching and handling the exception
+            System.out.println("Exception caught: " + e.getMessage());
+        } finally {
+            // This block is always executed, whether an exception is caught or not
+            System.out.println("Finally block executed.");
+        }
+
+        // Rest of the program continues after the try-catch-finally block
+        System.out.println("Program continues after exception handling.");
+    }
+}
