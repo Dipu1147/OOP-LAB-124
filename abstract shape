@@ -1,0 +1,43 @@
+// Abstract class Shape
+abstract class Shape {
+    // Abstract methods for calculating area and perimeter
+    public abstract double calculateArea();
+    public abstract double calculatePerimeter();
+}
+
+// Subclass Rectangle
+class Rectangle extends Shape {
+    // Attributes
+    private double length;
+    private double width;
+
+    // Constructor
+    public Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+
+    // Implementation of abstract methods
+    @Override
+    public double calculateArea() {
+        return length * width;
+    }
+
+    @Override
+    public double calculatePerimeter() {
+        return 2 * (length + width);
+    }
+}
+
+// Main class
+public class ShapeExample {
+    public static void main(String[] args) {
+        // Create an instance of Rectangle
+        Rectangle rectangle = new Rectangle(5.0, 3.0);
+
+        // Calculate and print area and perimeter of the rectangle
+        System.out.println("Rectangle Area: " + rectangle.calculateArea());
+        System.out.println("Rectangle Perimeter: " + rectangle.calculatePerimeter());
+    }
+}
+
