@@ -1,0 +1,34 @@
+// Interface Shape
+interface Shape {
+    double getArea();
+}
+
+// Class Triangle implementing the Shape interface
+class Triangle implements Shape {
+    // Attributes
+    private final double base;
+    private final double height;
+
+    // Constructor
+    public Triangle(double base, double height) {
+        this.base = base;
+        this.height = height;
+    }
+
+    // Implementation of the getArea() method from the Shape interface
+    @Override
+    public double getArea() {
+        return 0.5 * base * height; // Formula for the area of a triangle
+    }
+}
+
+// Main class
+public class ShapeExampleRepor {
+    public static void main(String[] args) {
+        // Create an instance of Triangle
+        Triangle triangle = new Triangle(4.0, 6.0);
+
+        // Calculate and print the area of the triangle
+        System.out.println("Triangle Area: " + triangle.getArea());
+    }
+}
