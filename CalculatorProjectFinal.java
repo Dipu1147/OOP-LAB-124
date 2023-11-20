@@ -1,3 +1,4 @@
+/* These lines import various classes and packages needed for creating a graphical user interface (GUI) using Java's Swing library.*/
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -16,8 +17,10 @@ import static javax.swing.Action.NAME;
 import static javax.swing.Action.SHORT_DESCRIPTION;
 import javax.swing.SwingConstants;
 
+/* This is the main class that contains the entire calculator application. */
 public class CalculatorProjectFinal {
 
+  /* These variables store the components of the calculator (buttons, labels) and the numbers and operator used in calculations.*/  
     private JFrame frame;
     private final Action action = new SwingAction();
     private JButton btnAC;
@@ -42,10 +45,8 @@ public class CalculatorProjectFinal {
     private JLabel lblans;
     private double number1, number2, answer;
     private int operator;
-
-    /**
-     * Launch the application.
-     */
+    
+/* The 'main' method is the entry point of the program. It creates an instance of the 'CalculatorProjectFinal' class and sets the GUI window to be visible.*/
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -59,16 +60,12 @@ public class CalculatorProjectFinal {
         });
     }
 
-    /**
-     * Create the application.
-     */
+ /* The constructor initializes the calculator by calling the 'initialize' method.*/
     public CalculatorProjectFinal() {
         initialize();
     }
 
-    /**
-     * Initialize the contents of the frame.
-     */
+    /*This method sets up the graphical user interface by creating and configuring the frame, buttons, labels, and their respective actions.*/
     private void initialize() {
         frame = new JFrame();
         frame.getContentPane().setFont(new Font("Copperplate Gothic Bold", Font.BOLD, 11));
@@ -79,6 +76,7 @@ public class CalculatorProjectFinal {
         btnAC = new JButton("AC");
         btnAC.setBackground(new Color(153, 153, 204));
         btnAC.setFont(new Font("Tahoma", Font.PLAIN, 8));
+        /* This snippet shows the action performed when the "AC" (All Clear) button is clicked.*/
         btnAC.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 lblans.setText("0");
@@ -309,6 +307,7 @@ public class CalculatorProjectFinal {
         operator = oper;
     }
 
+        /*The 'calculate' method is called when an operator is clicked. It performs the actual arithmetic calculations.*/
     public void calculate(int oper) {
         switch (oper) {
             case 10:
@@ -330,7 +329,7 @@ public class CalculatorProjectFinal {
         number1 = answer;
         number2 = 0;
     }
-
+/*This is an inner class that extends 'AbstractAction'. It is not currently used in the code.*/
     private class SwingAction extends AbstractAction {
         public SwingAction() {
             putValue(NAME, "SwingAction");
